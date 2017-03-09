@@ -67,6 +67,11 @@ set history=1000           | "
 colorscheme nova
 set noswapfile             | " I don't want any swap 
 
+" set the font for MacVim
+if has('gui_running')
+  set guifont=Monaco:h14
+endif
+
 "- Airline Symbol Setup
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
