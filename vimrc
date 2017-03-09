@@ -9,6 +9,9 @@ Plug 'trevordmiller/nova-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
+" vim-go plugin
+Plug 'fatih/vim-go'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 " end of Vim-Plug section
@@ -71,6 +74,13 @@ set noswapfile             | " I don't want any swap
 if has('gui_running')
   set guifont=Monaco:h14
 endif
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 "- Airline Symbol Setup
 if !exists('g:airline_symbols')
