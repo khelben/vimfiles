@@ -10,7 +10,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 " vim-go plugin
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'majutsushi/tagbar'
 
 call plug#end()
@@ -69,6 +69,9 @@ set history=1000           | "
 
 colorscheme nova
 set noswapfile             | " I don't want any swap 
+set mouse=a                | " use mouse if possible
+
+let mapleader=","
 
 " set the font for MacVim
 if has('gui_running')
@@ -98,3 +101,6 @@ let g:airline#extensions#tabline#enabled                = 1
 let g:airline#extensions#tabline#tab_min_count          = 2
 let g:airline#extensions#bufferline#overwrite_variables = 0
 let g:airline#extensions#bufferline#enabled             = 0
+
+"- Tagbar mappings
+nmap <leader>tb :TagbarToggle<CR>
