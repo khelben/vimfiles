@@ -68,8 +68,9 @@ set undofile               | " Make undo history persistent
 set history=1000           | "
 
 colorscheme nova
-set noswapfile             | " I don't want any swap 
+set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
+set wildmenu               | " allows to use tab in command mode
 
 let mapleader=","
 
