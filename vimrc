@@ -26,6 +26,7 @@ Plug 'ludovicchabant/vim-gutentags'  " Auto generate tags upon save etc
 let g:gutentags_cache_dir = '~/.tags_cache'
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 
 
 call plug#end()
@@ -149,3 +150,7 @@ nnoremap <C-l> <C-w>l
 
 " clear current highlighted search
 nnoremap <leader>cs :noh<cr>
+
+" NERDTree mappings
+nnoremap <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>nc :NERDTreeClose<cr>
