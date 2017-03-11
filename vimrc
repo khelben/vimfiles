@@ -64,8 +64,9 @@ set foldlevel=0            | " if fold everything if 'foldenable' is set
 " Search Setup
 set smartcase              | "
 set incsearch              | "
+set hlsearch               | " 
 "~ set inccommand=nosplit     | " Setup for Live Subsitution
-" Tab setup (tab=4spaces)
+" Tab setup (tab=2spaces)
 set tabstop=2              | "
 set softtabstop=0          | "
 set expandtab              | "
@@ -144,3 +145,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" clear current highlighted search
+nnoremap <leader>cs :noh<cr>
