@@ -19,6 +19,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist' " required for some navigation features
 Plug 'slashmili/alchemist.vim'
+let g:alchemist_tag_map = '<C-d>'
 
 " General
 Plug 'ludovicchabant/vim-gutentags'  " Auto generate tags upon save etc
