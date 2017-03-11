@@ -9,9 +9,23 @@ Plug 'trevordmiller/nova-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
+
 " vim-go plugin
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'majutsushi/tagbar'
+
+" Elixir plugins
+Plug 'elixir-lang/vim-elixir'
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist' " required for some navigation features
+Plug 'slashmili/alchemist.vim'
+
+" General
+Plug 'ludovicchabant/vim-gutentags'  " Auto generate tags upon save etc
+let g:gutentags_cache_dir = '~/.tags_cache'
+
+Plug 'ctrlpvim/ctrlp.vim'
+
 
 call plug#end()
 " end of Vim-Plug section
@@ -105,3 +119,28 @@ let g:airline#extensions#bufferline#enabled             = 0
 
 "- Tagbar mappings
 nmap <leader>tb :TagbarToggle<CR>
+
+" Tagbar Elixir understandings
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records',
+        \ 't:tests'
+    \ ]
+\ }
+
+" Some navigation helpers
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
