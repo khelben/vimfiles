@@ -28,6 +28,8 @@ let g:gutentags_cache_dir = '~/.tags_cache'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 
+" Git helpers
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 " end of Vim-Plug section
