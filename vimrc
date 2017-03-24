@@ -9,6 +9,7 @@ Plug 'trevordmiller/nova-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'altercation/vim-colors-solarized'
 
 " vim-go plugin
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -71,7 +72,7 @@ set foldlevel=0            | " if fold everything if 'foldenable' is set
 " Search Setup
 set smartcase              | "
 set incsearch              | "
-set hlsearch               | " 
+set hlsearch               | "
 "~ set inccommand=nosplit     | " Setup for Live Subsitution
 " Tab setup (tab=2spaces)
 set tabstop=2              | "
@@ -89,7 +90,12 @@ set undodir=~/.vim/undodir | " Set directory to store undo files
 set undofile               | " Make undo history persistent
 set history=1000           | "
 
-colorscheme nova
+if has("termguicolors")
+  colorscheme nova
+else
+  set background=dark
+  colorscheme solarized
+endif
 set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
 set wildmenu               | " allows to use tab in command mode
