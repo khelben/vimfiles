@@ -31,6 +31,9 @@ Plug 'scrooloose/nerdtree'
 " Git helpers
 Plug 'tpope/vim-fugitive'
 
+" Misc
+Plug 'tomtom/tcomment_vim'
+
 call plug#end()
 " end of Vim-Plug section
 
