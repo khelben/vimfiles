@@ -34,6 +34,7 @@ Plug 'tpope/vim-fugitive'
 
 " Misc
 Plug 'tomtom/tcomment_vim'
+Plug 'jlanzarotta/bufexplorer'
 
 call plug#end()
 " end of Vim-Plug section
