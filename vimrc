@@ -42,7 +42,7 @@ call plug#end()
 "- Vim Hackery
 set laststatus=2          | " Have statusline always on
 "~ set clipboard=unnamedplus | " Use system clipboard
-"~ set diffopt+=vertical     | " Make Fugitive's :Gsdiff behave
+set diffopt+=vertical     | " Make Fugitive's :Gsdiff behave
 set updatetime=250        | " Make gitgutter update more often
 set ttimeoutlen=0         | " Fix esc key delay
 set hidden                | " Make buffers persist in the background
@@ -53,6 +53,8 @@ set hidden                | " Make buffers persist in the background
 " https://github.com/davidhalter/jedi-vim/issues/163
 
 "- Vim Option Setup
+" proper backspacing
+set backspace=indent,eol,start | " see :help 'backspace'
 " Line number
 set number                 | " Turn on line numbers
 "~ set relativenumber         | " Make line numbers relative to cursor
