@@ -36,6 +36,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tomtom/tcomment_vim'
 Plug 'jlanzarotta/bufexplorer'
 
+" Themes
+Plug 'mhinz/vim-janah'
+
 call plug#end()
 " end of Vim-Plug section
 
@@ -93,12 +96,14 @@ set undodir=~/.vim/undodir | " Set directory to store undo files
 set undofile               | " Make undo history persistent
 set history=1000           | "
 
-if has("termguicolors")
-  colorscheme nova
-else
-  set background=dark
-  colorscheme solarized
-endif
+" if has("termguicolors")
+"   colorscheme nova
+" else
+"   set background=dark
+"   colorscheme solarized
+" endif
+autocmd ColorScheme janah highlight Normal ctermbg=235
+colorscheme janah
 set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
 set wildmenu               | " allows to use tab in command mode
