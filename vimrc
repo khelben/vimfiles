@@ -4,8 +4,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" nova theme and suggested plugins https://trevordmiller.com/projects/nova
-Plug 'trevordmiller/nova-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
@@ -96,12 +94,6 @@ set undodir=~/.vim/undodir | " Set directory to store undo files
 set undofile               | " Make undo history persistent
 set history=1000           | "
 
-" if has("termguicolors")
-"   colorscheme nova
-" else
-"   set background=dark
-"   colorscheme solarized
-" endif
 autocmd ColorScheme janah highlight Normal ctermbg=235
 colorscheme janah
 set noswapfile             | " I don't want any swap
