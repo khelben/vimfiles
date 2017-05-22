@@ -100,6 +100,8 @@ set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
 set wildmenu               | " allows to use tab in command mode
 
+set autoread               | " auto read changed files
+
 let mapleader=","
 
 " set the font for MacVim
