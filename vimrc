@@ -116,7 +116,11 @@ let mapleader=","
 
 " set the font for MacVim
 if has('gui_running')
-  set guifont=Monaco:h14
+  if has('macvim')
+    set guifont=Monaco:h14
+  else
+    set guifont=Monaco\ 11
+  endif
 endif
 
 let g:go_highlight_functions = 1
