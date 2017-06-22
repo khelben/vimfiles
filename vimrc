@@ -31,6 +31,8 @@ Plug 'tpope/vim-cucumber'
 " General
 Plug 'ludovicchabant/vim-gutentags'  " Auto generate tags upon save etc
 let g:gutentags_cache_dir = '~/.tags_cache'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
