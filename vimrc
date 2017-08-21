@@ -177,3 +177,6 @@ nnoremap <leader>cs :noh<cr>
 " NERDTree mappings
 nnoremap <leader>nf :NERDTreeFind<cr>
 nnoremap <leader>nc :NERDTreeClose<cr>
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
