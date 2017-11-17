@@ -7,7 +7,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'altercation/vim-colors-solarized'
 
 " vim-go plugin
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -45,7 +44,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'jlanzarotta/bufexplorer'
 
 " Themes
-Plug 'mhinz/vim-janah'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 " end of Vim-Plug section
@@ -104,8 +103,8 @@ set undodir=~/.vim/undodir | " Set directory to store undo files
 set undofile               | " Make undo history persistent
 set history=1000           | "
 
-autocmd ColorScheme janah highlight Normal ctermbg=235
-colorscheme janah
+" see https://github.com/arcticicestudio/nord for colorschemes for other apps
+colorscheme nord
 set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
 set wildmenu               | " allows to use tab in command mode
