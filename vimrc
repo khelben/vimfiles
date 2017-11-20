@@ -36,7 +36,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
 " Once CtrlP is open:
-" 
+"
 "     Press <F5> to purge the cache for the current directory to get new files, remove deleted files and apply new ignore options.
 "     Press <c-f> and <c-b> to cycle between modes.
 "     Press <c-d> to switch to filename only search instead of full path.
@@ -46,7 +46,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 "     Use <c-n>, <c-p> to select the next/previous string in the prompt's history.
 "     Use <c-y> to create a new file and its parent directories.
 "     Use <c-z> to mark/unmark multiple files and <c-o> to open them.
-" 
+"
 " Run :help ctrlp-mappings or submit ? in CtrlP for more mapping help.
 Plug 'scrooloose/nerdtree'
 
@@ -56,6 +56,7 @@ Plug 'tpope/vim-fugitive'
 " Misc
 Plug 'tomtom/tcomment_vim'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'mileszs/ack.vim'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
@@ -143,11 +144,11 @@ let g:go_highlight_build_constraints = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.paste  = 'Þ'
-let g:airline_symbols.paste  = 'ρ'
+" let g:airline_symbols.linenr = '␊'
+" let g:airline_symbols.linenr = '␤'
+" let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.paste  = 'Þ'
+" let g:airline_symbols.paste  = 'ρ'
 
 "- Airline Setup
 " let g:airline#extensions#tmuxline#enabled               = 1
@@ -155,6 +156,7 @@ let g:airline#extensions#tabline#enabled                = 1
 let g:airline#extensions#tabline#tab_min_count          = 2
 let g:airline#extensions#bufferline#overwrite_variables = 0
 let g:airline#extensions#bufferline#enabled             = 0
+let g:airline_theme='bubblegum'
 
 "- Tagbar mappings
 nmap <leader>tb :TagbarToggle<CR>
@@ -177,6 +179,10 @@ let g:tagbar_type_elixir = {
         \ 't:tests'
     \ ]
 \ }
+
+" vim-ack settings
+let g:ackprg = 'ag --vimgrep --smart-case'
+nnoremap <leader>a :Ack!<Space>
 
 " Some navigation helpers
 nnoremap <C-h> <C-w>h
