@@ -184,11 +184,6 @@ let g:tagbar_type_elixir = {
 let g:ackprg = 'ag --vimgrep --smart-case'
 nnoremap <leader>a :Ack!<Space>
 
-" Some navigation helpers
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 " switch between splits easily
 nnoremap <leader>w <C-w><C-w>
 
