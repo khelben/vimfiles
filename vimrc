@@ -50,6 +50,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 "
 " Run :help ctrlp-mappings or submit ? in CtrlP for more mapping help.
 Plug 'scrooloose/nerdtree'
+Plug 'vim-syntastic/syntastic'
 
 " Git helpers
 Plug 'tpope/vim-fugitive'
