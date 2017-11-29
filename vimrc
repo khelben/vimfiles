@@ -22,6 +22,7 @@ let g:alchemist_tag_map = '<C-d>'
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
 
 " cucumber
 Plug 'tpope/vim-cucumber'
