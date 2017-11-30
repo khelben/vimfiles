@@ -35,20 +35,6 @@ let g:gutentags_cache_dir = '~/.tags_cache'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'ctrlpvim/ctrlp.vim'
-" Once CtrlP is open:
-"
-"     Press <F5> to purge the cache for the current directory to get new files, remove deleted files and apply new ignore options.
-"     Press <c-f> and <c-b> to cycle between modes.
-"     Press <c-d> to switch to filename only search instead of full path.
-"     Press <c-r> to switch to regexp mode.
-"     Use <c-j>, <c-k> or the arrow keys to navigate the result list.
-"     Use <c-t> or <c-v>, <c-x> to open the selected entry in a new tab or in a new split.
-"     Use <c-n>, <c-p> to select the next/previous string in the prompt's history.
-"     Use <c-y> to create a new file and its parent directories.
-"     Use <c-z> to mark/unmark multiple files and <c-o> to open them.
-"
-" Run :help ctrlp-mappings or submit ? in CtrlP for more mapping help.
 Plug 'scrooloose/nerdtree'
 Plug 'vim-syntastic/syntastic'
 
@@ -182,9 +168,12 @@ let g:tagbar_type_elixir = {
     \ ]
 \ }
 
-" vim-ack settings
-let g:ackprg = 'ag --vimgrep --smart-case'
-nnoremap <leader>a :Ack!<Space>
+" " vim-ack settings
+" let g:ackprg = 'ag --vimgrep --smart-case'
+
+" use fzf for Ag and fuzzy file finder
+nnoremap <leader>a :Ag<cr>
+nnoremap <C-p> :Files<cr>
 
 " switch between splits easily
 nnoremap <leader>w <C-w><C-w>
