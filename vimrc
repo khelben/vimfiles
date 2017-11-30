@@ -44,7 +44,7 @@ Plug 'tpope/vim-fugitive'
 " Misc
 Plug 'tomtom/tcomment_vim'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
@@ -187,3 +187,11 @@ nnoremap <leader>nc :NERDTreeClose<cr>
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" vim-airline syntastic integration
+let g:airline#extensions#syntastic#enabled = 1
+
+let airline#extensions#syntastic#error_symbol = 'E:'
+let airline#extensions#syntastic#stl_format_err = '%E{[%e(#%fe)]}'
+let airline#extensions#syntastic#warning_symbol = 'W:'
+let airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
