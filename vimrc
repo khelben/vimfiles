@@ -1,3 +1,6 @@
+" TODO:
+" check https://github.com/w0rp/ale as an async replacement for syntastic
+" https://github.com/thoughtbot/dotfiles/blob/master/vimrc
 
 " start of Vim-Plug section https://github.com/junegunn/vim-plug#usage
 call plug#begin('~/.vim/plugged')
@@ -37,6 +40,8 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-syntastic/syntastic'
+
+Plug 'SirVer/ultisnips'
 
 " Git helpers
 Plug 'tpope/vim-fugitive'
@@ -151,22 +156,22 @@ nmap <leader>tb :TagbarToggle<CR>
 
 " Tagbar Elixir understandings
 let g:tagbar_type_elixir = {
-    \ 'ctagstype' : 'elixir',
-    \ 'kinds' : [
-        \ 'f:functions',
-        \ 'functions:functions',
-        \ 'c:callbacks',
-        \ 'd:delegates',
-        \ 'e:exceptions',
-        \ 'i:implementations',
-        \ 'a:macros',
-        \ 'o:operators',
-        \ 'm:modules',
-        \ 'p:protocols',
-        \ 'r:records',
-        \ 't:tests'
-    \ ]
-\ }
+      \ 'ctagstype' : 'elixir',
+      \ 'kinds' : [
+      \ 'f:functions',
+      \ 'functions:functions',
+      \ 'c:callbacks',
+      \ 'd:delegates',
+      \ 'e:exceptions',
+      \ 'i:implementations',
+      \ 'a:macros',
+      \ 'o:operators',
+      \ 'm:modules',
+      \ 'p:protocols',
+      \ 'r:records',
+      \ 't:tests'
+      \ ]
+      \ }
 
 " " vim-ack settings
 " let g:ackprg = 'ag --vimgrep --smart-case'
@@ -187,3 +192,14 @@ nnoremap <leader>nc :NERDTreeClose<cr>
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" neovim specific settings
+if has('nvim')
+  let g:python3_host_prog = '/usr/local/bin/python3' 
+endif
+
+" UltiSnip settings
+" the window which opens with :UltiSnipsEdit
+let g:UltiSnipsEditSplit='vertical'
+" where to write my own snippets
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
