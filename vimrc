@@ -211,3 +211,6 @@ endif
 let g:UltiSnipsEditSplit='vertical'
 " where to write my own snippets
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+
+" vim-go extra mappings
+nnoremap <leader>gi :GoImports<cr>
