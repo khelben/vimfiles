@@ -49,7 +49,6 @@ Plug 'tpope/vim-fugitive'
 " Misc
 Plug 'tomtom/tcomment_vim'
 Plug 'jlanzarotta/bufexplorer'
-" Plug 'mileszs/ack.vim'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
