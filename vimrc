@@ -178,6 +178,8 @@ let g:tagbar_type_elixir = {
 " use fzf for Ag and fuzzy file finder
 nnoremap <leader>a :Ag<cr>
 nnoremap <C-p> :Files<cr>
+" execute :Tags command and search for word under cursor
+nnoremap <leader>t :call fzf#vim#tags(expand('<cword>'))<cr>
 
 " switch between splits easily
 nnoremap <leader>w <C-w><C-w>
@@ -213,3 +215,4 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
 " vim-go extra mappings
 nnoremap <leader>gi :GoImports<cr>
+
