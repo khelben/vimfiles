@@ -11,6 +11,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 
+" vim-vue
+Plug 'posva/vim-vue'
+
 " vim-go plugin
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'majutsushi/tagbar'
@@ -216,3 +219,15 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 " vim-go extra mappings
 nnoremap <leader>gi :GoImports<cr>
 
+" Trailing whitespaces
+function! TrimWhiteSpace()
+  %s/\s*$//
+  ''
+endfunction
+
+set list listchars=tab:»·,trail:·
+
+augroup rubyfileautocommandgroup
+  autocmd!
+  autocmd FileType ruby autocmd BufWritePre * call TrimWhiteSpace()   
+augroup END
