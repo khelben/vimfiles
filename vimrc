@@ -207,7 +207,7 @@ let airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
 
 " neovim specific settings
 if has('nvim')
-  let g:python3_host_prog = '/usr/local/bin/python3' 
+  let g:python3_host_prog = '/usr/local/bin/python3'
 endif
 
 " UltiSnip settings
@@ -219,15 +219,9 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 " vim-go extra mappings
 nnoremap <leader>gi :GoImports<cr>
 
-" Trailing whitespaces
-function! TrimWhiteSpace()
-  %s/\s*$//
-  ''
-endfunction
-
 set list listchars=tab:»·,trail:·
 
 augroup rubyfileautocommandgroup
   autocmd!
-  autocmd FileType ruby autocmd BufWritePre * call TrimWhiteSpace()   
+  autocmd FileType ruby autocmd BufWritePre * silent call cvp#ruby#TrimWhiteSpace()
 augroup END
