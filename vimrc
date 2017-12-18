@@ -206,9 +206,9 @@ let airline#extensions#syntastic#warning_symbol = 'W:'
 let airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
 
 " neovim specific settings
-if has('nvim')
-  let g:python3_host_prog = '/usr/local/bin/python3'
-endif
+" if has('nvim')
+"   let g:python3_host_prog = '/usr/local/bin/python3' 
+" endif
 
 " UltiSnip settings
 " the window which opens with :UltiSnipsEdit
@@ -220,8 +220,3 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 nnoremap <leader>gi :GoImports<cr>
 
 set list listchars=tab:»·,trail:·
-
-augroup rubyfileautocommandgroup
-  autocmd!
-  autocmd FileType ruby autocmd BufWritePre * silent call cvp#ruby#TrimWhiteSpace()
-augroup END
