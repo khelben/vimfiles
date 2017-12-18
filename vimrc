@@ -183,6 +183,7 @@ nnoremap <leader>a :Ag<cr>
 nnoremap <C-p> :Files<cr>
 " execute :Tags command and search for word under cursor
 nnoremap <leader>t :call fzf#vim#tags(expand('<cword>'))<cr>
+nnoremap <leader>fa :call fzf#vim#ag(expand('<cword>'))<cr>
 
 " switch between splits easily
 nnoremap <leader>w <C-w><C-w>
@@ -207,7 +208,7 @@ let airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
 
 " neovim specific settings
 " if has('nvim')
-"   let g:python3_host_prog = '/usr/local/bin/python3' 
+"   let g:python3_host_prog = '/usr/local/bin/python3'
 " endif
 
 " UltiSnip settings
