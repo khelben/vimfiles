@@ -35,6 +35,10 @@ Plug 'tpope/vim-cucumber'
 " TODO: docs
 " ]d to go to the definition of a step
 
+" csharp
+" TODO 
+" Plug 'OmniSharp/omnisharp-vim'
+
 " General
 Plug 'ludovicchabant/vim-gutentags'  " Auto generate tags upon save etc
 let g:gutentags_cache_dir = '~/.tags_cache'
@@ -45,6 +49,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-syntastic/syntastic'
 
 Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-unimpaired'
 
 " Git helpers
 Plug 'tpope/vim-fugitive'
