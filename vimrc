@@ -36,7 +36,7 @@ Plug 'tpope/vim-cucumber'
 " ]d to go to the definition of a step
 
 " csharp
-" TODO 
+" TODO
 " Plug 'OmniSharp/omnisharp-vim'
 
 " General
@@ -59,7 +59,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'jlanzarotta/bufexplorer'
 
 " Themes
-Plug 'arcticicestudio/nord-vim'
+Plug 'ericbn/vim-solarized'
 
 call plug#end()
 " end of Vim-Plug section
@@ -119,7 +119,9 @@ set undofile               | " Make undo history persistent
 set history=1000           | "
 
 " see https://github.com/arcticicestudio/nord for colorschemes for other apps
-colorscheme nord
+set background=dark
+colorscheme solarized
+
 set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
 set wildmenu               | " allows to use tab in command mode
