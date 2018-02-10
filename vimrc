@@ -60,6 +60,7 @@ Plug 'jlanzarotta/bufexplorer'
 
 " Themes
 Plug 'ericbn/vim-solarized'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 " end of Vim-Plug section
@@ -118,9 +119,9 @@ set undodir=~/.vim/undodir | " Set directory to store undo files
 set undofile               | " Make undo history persistent
 set history=1000           | "
 
-" see https://github.com/arcticicestudio/nord for colorschemes for other apps
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='soft'
 
 set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
