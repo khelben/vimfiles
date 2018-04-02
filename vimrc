@@ -60,7 +60,6 @@ Plug 'jlanzarotta/bufexplorer'
 
 " Themes
 Plug 'ericbn/vim-solarized'
-Plug 'morhetz/gruvbox'
 
 call plug#end()
 " end of Vim-Plug section
@@ -120,8 +119,7 @@ set undofile               | " Make undo history persistent
 set history=1000           | "
 
 set background=dark
-colorscheme gruvbox
-let g:gruvbox_contrast_dark='soft'
+colorscheme solarized
 
 set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
