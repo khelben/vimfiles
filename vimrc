@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " vim-vue
 Plug 'posva/vim-vue'
@@ -48,7 +49,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-syntastic/syntastic'
 
-Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-unimpaired'
 
 " Git helpers
@@ -71,14 +71,12 @@ set diffopt+=vertical     | " Make Fugitive's :Gsdiff behave
 set updatetime=250        | " Make gitgutter update more often
 set ttimeoutlen=0         | " Fix esc key delay
 set hidden                | " Make buffers persist in the background
-"~ let g:pymode_rope=0       | " Fix massive delay from deoplete_jedi
-" This delay is caused when using deoplete_jedi's suggestions
+"~ let g:pymode_rope=0       | " Fix massive delay from deoplete_jedi " This delay is caused when using deoplete_jedi's suggestions
 " when python-mode is also installed. This issue is still
 " open on github:
 " https://github.com/davidhalter/jedi-vim/issues/163
 
-"- Vim Option Setup
-" proper backspacing
+"- Vim Option Setup " proper backspacing
 set backspace=indent,eol,start | " see :help 'backspace'
 " Line number
 set number                 | " Turn on line numbers
@@ -89,11 +87,7 @@ set showcmd                | " Show letters as they're typed
 set noshowmode             | " Use Airline instead
 " Pane setup
 set splitright             | " Make vertical splits open to the right
-set splitbelow             | " Make horiontal splits open to the bottom
-" Indentation
-set autoindent             | " Autoindent when creating a new line
-set copyindent             | "
-set shiftround             | "
+set splitbelow             | " Make horiontal splits open to the bottom " Indentation set autoindent             | " Autoindent when creating a new line set copyindent             | " set shiftround             | "
 set foldmethod=indent      | " by default, fold using indentation
 set nofoldenable           | " don't fold by default
 set foldlevel=0            | " if fold everything if 'foldenable' is set
@@ -120,6 +114,7 @@ set history=1000           | "
 
 set background=dark
 colorscheme solarized
+" let g:gruvbox_contrast_dark='soft'
 
 set noswapfile             | " I don't want any swap
 set mouse=a                | " use mouse if possible
@@ -131,7 +126,7 @@ let mapleader=","
 
 " set the font for MacVim
 if has('gui_running')
-  set guifont=Inconsolata\ Regular:h16
+  set guifont=Monaco:h12
 endif
 
 let g:go_highlight_functions = 1
@@ -216,12 +211,6 @@ let airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
 " if has('nvim')
 "   let g:python3_host_prog = '/usr/local/bin/python3'
 " endif
-
-" UltiSnip settings
-" the window which opens with :UltiSnipsEdit
-let g:UltiSnipsEditSplit='vertical'
-" where to write my own snippets
-let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
 " vim-go extra mappings
 nnoremap <leader>gi :GoImports<cr>
