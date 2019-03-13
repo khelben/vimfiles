@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'digitaltoad/vim-pug'
 
 " vim-vue
 Plug 'posva/vim-vue'
