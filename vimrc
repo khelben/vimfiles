@@ -168,7 +168,7 @@ let g:tagbar_type_elixir = {
 
 " use fzf for Ag and fuzzy file finder
 nnoremap <leader>a :Ag<cr>
-nnoremap <C-p> :Files<cr>
+nnoremap <leader>p :Files<cr>
 " execute :Tags command and search for word under cursor
 nnoremap <leader>t :call fzf#vim#tags(expand('<cword>'))<cr>
 nnoremap <leader>fa :call fzf#vim#ag(expand('<cword>'))<cr>
