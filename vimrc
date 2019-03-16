@@ -7,9 +7,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" javascript related
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'digitaltoad/vim-pug'
 Plug 'HerringtonDarkholme/yats.vim'
 
 " vim-vue
@@ -19,26 +22,10 @@ Plug 'posva/vim-vue'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'majutsushi/tagbar'
 
-" Elixir plugins
-Plug 'elixir-lang/vim-elixir'
-Plug 'c-brenn/phoenix.vim'
-Plug 'tpope/vim-projectionist' " required for some navigation features
-Plug 'slashmili/alchemist.vim'
-let g:alchemist_tag_map = '<C-d>'
-
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
-
-" cucumber
-Plug 'tpope/vim-cucumber'
-" TODO: docs
-" ]d to go to the definition of a step
-
-" csharp
-" TODO
-" Plug 'OmniSharp/omnisharp-vim'
 
 " General
 Plug 'ludovicchabant/vim-gutentags'  " Auto generate tags upon save etc
