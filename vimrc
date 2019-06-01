@@ -203,3 +203,7 @@ let airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
 nnoremap <leader>gi :GoImports<cr>
 
 set list listchars=tab:»·,trail:·
+
+" make vim work with transparant background terminals
+highlight Normal guibg=NONE ctermbg=NONE
+
